@@ -1,0 +1,676 @@
+----------------------------------------
+-----------Sun Devil Rocketry-----------
+-----------Unit Test Results------------
+----------------------------------------
+
+----------------------------------------
+------------Test Environment------------
+----------------------------------------
+
+--General Build Information--
+Test Name:        mahony.c
+Test Type:        Unit Test
+Build Date:       Nov 26 2026
+Build Time:       21:18:48
+Run Date:         Nov 26 2026
+Run Time:         21:18:48
+ISO C?:           1
+C Standard:       202311
+
+--GNU C Compiler (GCC) Info--
+GCC Version:      15.2.0
+
+--GCOVR Info--
+GCOVR Version:    8.8
+
+----------------------------------------
+----------------Results-----------------
+----------------------------------------
+
+
+--BEGIN TEST GROUP: Check test environment--
+
+Test Environment: Release build
+Actual: TRUE | Expected: TRUE
+
+Test Environment: ISO C standard is C17 or greater
+Actual: 202311 | Expected: 201700
+
+Test Environment: Compiler at/above minimum GCC version
+Actual: 15 | Expected: 8
+
+Test Environment: Compiler at/below maximum GCC version
+Actual: 15 | Expected: 15
+
+Test Environment: Coverage tool at/above minimum GCOVR version
+Actual: 8 | Expected: 7
+
+Test Environment: Coverage tool at/below maximum GCOVR version
+Actual: 8 | Expected: 8
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+--END TEST GROUP: Check test environment--
+
+
+--BEGIN TEST GROUP: mahony_init_normalizes_attitude--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: -0.000000 | Expected: 0.000000
+
+Quaternion x component
+Actual: 1.000000 | Expected: 1.000000
+
+Quaternion y component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion z component
+Actual: -0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+Requirement Tag: RQ.MOD.00037
+--END TEST GROUP: mahony_init_normalizes_attitude--
+
+
+--BEGIN TEST GROUP: mahony_init_uses_accel_calibration--
+
+Calibration initializes the attitude from gravity
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: 0.707107 | Expected: 0.707107
+
+Quaternion x component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion y component
+Actual: 0.707107 | Expected: 0.707107
+
+Quaternion z component
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+--END TEST GROUP: mahony_init_uses_accel_calibration--
+
+
+--BEGIN TEST GROUP: mahony_init_clears_integral_error--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Integral error x initializes to zero
+Actual: 0.000000 | Expected: 0.000000
+
+Integral error y initializes to zero
+Actual: 0.000000 | Expected: 0.000000
+
+Integral error z initializes to zero
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+--END TEST GROUP: mahony_init_clears_integral_error--
+
+
+--BEGIN TEST GROUP: mahony_init_rejects_null_filter--
+
+Null navigation state is rejected
+Actual: 4 | Expected: 4
+
+--TEST GROUP RESULTS:--
+Group Passes: 1
+Group Fails:  0
+--END TEST GROUP: mahony_init_rejects_null_filter--
+
+
+--BEGIN TEST GROUP: mahony_init_rejects_negative_gain--
+
+Negative proportional gain is rejected
+Actual: 6 | Expected: 6
+
+Negative integral gain is rejected
+Actual: 6 | Expected: 6
+
+--TEST GROUP RESULTS:--
+Group Passes: 2
+Group Fails:  0
+--END TEST GROUP: mahony_init_rejects_negative_gain--
+
+
+--BEGIN TEST GROUP: mahony_update_gyro_zero_rate--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Zero-rate update succeeds
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: 1.000000 | Expected: 1.000000
+
+Quaternion x component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion y component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion z component
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_gyro_zero_rate--
+
+
+--BEGIN TEST GROUP: mahony_update_gyro_positive_yaw--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Positive-yaw propagation succeeds
+Actual: 0 | Expected: 0
+
+Positive 90-degree yaw quaternion w component
+Actual: 0.707106 | Expected: 0.707107
+
+Positive 90-degree yaw quaternion z component
+Actual: 0.707108 | Expected: 0.707107
+
+Positive yaw rotates body positive X to world positive Y
+Actual: 1.000000 | Expected: 1.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_gyro_positive_yaw--
+
+
+--BEGIN TEST GROUP: mahony_update_gyro_rejects_invalid_delta_time--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Negative delta time is rejected
+Actual: 5 | Expected: 5
+
+Negative delta time is rejected
+Actual: 5 | Expected: 5
+
+--TEST GROUP RESULTS:--
+Group Passes: 3
+Group Fails:  0
+--END TEST GROUP: mahony_update_gyro_rejects_invalid_delta_time--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_aligned_gravity--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Aligned IMU updates succeed
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: 1.000000 | Expected: 1.000000
+
+Quaternion x component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion y component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion z component
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_imu_aligned_gravity--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_roll_error_converges--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Roll-error correction updates succeed
+Actual: 0 | Expected: 0
+
+Roll error decreases toward level
+Actual: TRUE | Expected: TRUE
+
+Corrected body Z approaches world Z
+Actual: TRUE | Expected: TRUE
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_imu_roll_error_converges--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_pitch_error_converges--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Pitch-error correction updates succeed
+Actual: 0 | Expected: 0
+
+Pitch error decreases toward level
+Actual: TRUE | Expected: TRUE
+
+Corrected body Z approaches world Z
+Actual: TRUE | Expected: TRUE
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_imu_pitch_error_converges--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_yaw_error_does_not_converge--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Yaw-only correction updates succeed
+Actual: 0 | Expected: 0
+
+Accelerometer does not correct yaw X component
+Actual: 0.939693 | Expected: 0.939693
+
+Accelerometer does not correct yaw Y component
+Actual: 0.342020 | Expected: 0.342020
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_imu_yaw_error_does_not_converge--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_zero_accel_uses_gyro_only--
+
+Gyro filter initialization succeeds
+Actual: 0 | Expected: 0
+
+IMU filter initialization succeeds
+Actual: 0 | Expected: 0
+
+Gyro-only updates succeed
+Actual: 0 | Expected: 0
+
+Zero-accelerometer IMU updates succeed
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: 0.923879 | Expected: 0.923879
+
+Quaternion x component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion y component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion z component
+Actual: 0.382685 | Expected: 0.382685
+
+--TEST GROUP RESULTS:--
+Group Passes: 8
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_imu_zero_accel_uses_gyro_only--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_disabled_accel_uses_gyro_only--
+
+Gyro filter initialization succeeds
+Actual: 0 | Expected: 0
+
+IMU filter initialization succeeds
+Actual: 0 | Expected: 0
+
+Gyro-only updates succeed
+Actual: 0 | Expected: 0
+
+Disabled-accelerometer IMU updates succeed
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: 0.965926 | Expected: 0.965926
+
+Quaternion x component
+Actual: 0.258819 | Expected: 0.258819
+
+Quaternion y component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion z component
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 8
+Group Fails:  0
+Requirement Tag: RQ.MOD.00038
+--END TEST GROUP: mahony_update_imu_disabled_accel_uses_gyro_only--
+
+
+--BEGIN TEST GROUP: mahony_print_gyro_propagation--
+
+Gyro diagnostic filter initialization succeeds
+Actual: 0 | Expected: 0
+
+Gyro diagnostic propagation succeeds
+Actual: 0 | Expected: 0
+
+Gyro-propagated quaternion remains normalized
+Actual: TRUE | Expected: TRUE
+
+--TEST GROUP RESULTS:--
+Group Passes: 3
+Group Fails:  0
+--END TEST GROUP: mahony_print_gyro_propagation--
+
+
+--BEGIN TEST GROUP: mahony_print_accelerometer_correction--
+
+Accelerometer diagnostic filter initialization succeeds
+Actual: 0 | Expected: 0
+
+Accelerometer diagnostic updates succeed
+Actual: 0 | Expected: 0
+
+Accelerometer correction improves body Z alignment
+Actual: TRUE | Expected: TRUE
+
+--TEST GROUP RESULTS:--
+Group Passes: 3
+Group Fails:  0
+--END TEST GROUP: mahony_print_accelerometer_correction--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_rejects_low_accel_magnitude--
+
+Gyro filter initialization succeeds
+Actual: 0 | Expected: 0
+
+IMU filter initialization succeeds
+Actual: 0 | Expected: 0
+
+Gyro-only updates succeed
+Actual: 0 | Expected: 0
+
+Low-acceleration IMU updates succeed
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: 0.984808 | Expected: 0.984808
+
+Quaternion x component
+Actual: 0.173648 | Expected: 0.173648
+
+Quaternion y component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion z component
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 8
+Group Fails:  0
+Requirement Tag: RQ.MOD.00039
+--END TEST GROUP: mahony_update_imu_rejects_low_accel_magnitude--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_rejects_high_accel_magnitude--
+
+Gyro filter initialization succeeds
+Actual: 0 | Expected: 0
+
+IMU filter initialization succeeds
+Actual: 0 | Expected: 0
+
+Gyro-only updates succeed
+Actual: 0 | Expected: 0
+
+High-acceleration IMU updates succeed
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: 0.991445 | Expected: 0.991445
+
+Quaternion x component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion y component
+Actual: 0.130526 | Expected: 0.130526
+
+Quaternion z component
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 8
+Group Fails:  0
+Requirement Tag: RQ.MOD.00039
+--END TEST GROUP: mahony_update_imu_rejects_high_accel_magnitude--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_rejects_nonfinite_accel--
+
+Gyro filter initialization succeeds
+Actual: 0 | Expected: 0
+
+IMU filter initialization succeeds
+Actual: 0 | Expected: 0
+
+Gyro-only update succeeds
+Actual: 0 | Expected: 0
+
+Invalid-accelerometer IMU update succeeds
+Actual: 0 | Expected: 0
+
+Quaternion w component
+Actual: 1.000000 | Expected: 1.000000
+
+Quaternion x component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion y component
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion z component
+Actual: 0.000873 | Expected: 0.000873
+
+--TEST GROUP RESULTS:--
+Group Passes: 8
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_imu_rejects_nonfinite_accel--
+
+
+--BEGIN TEST GROUP: mahony_update_imu_accepts_valid_accel_magnitude--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Valid-acceleration IMU updates succeed
+Actual: 0 | Expected: 0
+
+Valid acceleration improves body Z alignment
+Actual: TRUE | Expected: TRUE
+
+--TEST GROUP RESULTS:--
+Group Passes: 3
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_update_imu_accepts_valid_accel_magnitude--
+
+
+--BEGIN TEST GROUP: mahony_integral_zero_gain_does_not_accumulate--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Zero-Ki updates succeed
+Actual: 0 | Expected: 0
+
+Zero Ki preserves integral X
+Actual: 0.000000 | Expected: 0.000000
+
+Zero Ki preserves integral Y
+Actual: 0.000000 | Expected: 0.000000
+
+Zero Ki preserves integral Z
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_integral_zero_gain_does_not_accumulate--
+
+
+--BEGIN TEST GROUP: mahony_integral_valid_error_accumulates--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Integral update succeeds
+Actual: 0 | Expected: 0
+
+Roll error accumulates integral correction
+Actual: TRUE | Expected: TRUE
+
+Pure roll error produces negligible integral Y
+Actual: TRUE | Expected: TRUE
+
+Pure roll error produces negligible integral Z
+Actual: TRUE | Expected: TRUE
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_integral_valid_error_accumulates--
+
+
+--BEGIN TEST GROUP: mahony_integral_disabled_accel_does_not_accumulate--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Disabled-accelerometer updates succeed
+Actual: 0 | Expected: 0
+
+Disabled accelerometer preserves integral X
+Actual: 0.000000 | Expected: 0.000000
+
+Disabled accelerometer preserves integral Y
+Actual: 0.000000 | Expected: 0.000000
+
+Disabled accelerometer preserves integral Z
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036, RQ.MOD.00038
+--END TEST GROUP: mahony_integral_disabled_accel_does_not_accumulate--
+
+
+--BEGIN TEST GROUP: mahony_integral_invalid_accel_does_not_accumulate--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+Invalid-accelerometer updates succeed
+Actual: 0 | Expected: 0
+
+Invalid acceleration preserves integral X
+Actual: 0.000000 | Expected: 0.000000
+
+Invalid acceleration preserves integral Y
+Actual: 0.000000 | Expected: 0.000000
+
+Invalid acceleration preserves integral Z
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036, RQ.MOD.00039
+--END TEST GROUP: mahony_integral_invalid_accel_does_not_accumulate--
+
+
+--BEGIN TEST GROUP: mahony_integral_is_limited--
+
+Mahony initialization succeeds
+Actual: 0 | Expected: 0
+
+High-integral-gain update succeeds
+Actual: 0 | Expected: 0
+
+Integral X does not exceed anti-windup limit
+Actual: TRUE | Expected: TRUE
+
+Integral Y does not exceed anti-windup limit
+Actual: TRUE | Expected: TRUE
+
+Integral Z does not exceed anti-windup limit
+Actual: TRUE | Expected: TRUE
+
+Large roll error reaches integral limit
+Actual: TRUE | Expected: TRUE
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_integral_is_limited--
+
+
+--BEGIN TEST GROUP: mahony_integral_correction_affects_attitude--
+
+No-integral filter initialization succeeds
+Actual: 0 | Expected: 0
+
+Integral filter initialization succeeds
+Actual: 0 | Expected: 0
+
+No-integral update succeeds
+Actual: 0 | Expected: 0
+
+Integral update succeeds
+Actual: 0 | Expected: 0
+
+Integral correction changes propagated attitude
+Actual: TRUE | Expected: TRUE
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+Requirement Tag: RQ.MOD.00036
+--END TEST GROUP: mahony_integral_correction_affects_attitude--
+
+----------------------------------------
+-------------Test Complete--------------
+----------------------------------------
+Passes: 135
+Fails:  0
+Result: PASS
+----------------------------------------

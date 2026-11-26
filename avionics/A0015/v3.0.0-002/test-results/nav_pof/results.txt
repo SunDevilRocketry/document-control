@@ -1,0 +1,638 @@
+----------------------------------------
+-----------Sun Devil Rocketry-----------
+-----------Unit Test Results------------
+----------------------------------------
+
+----------------------------------------
+------------Test Environment------------
+----------------------------------------
+
+--General Build Information--
+Test Name:        nav_pof.c
+Test Type:        Unit Test
+Build Date:       Nov 26 2026
+Build Time:       21:18:49
+Run Date:         Nov 26 2026
+Run Time:         21:18:49
+ISO C?:           1
+C Standard:       202311
+
+--GNU C Compiler (GCC) Info--
+GCC Version:      15.2.0
+
+--GCOVR Info--
+GCOVR Version:    8.8
+
+----------------------------------------
+----------------Results-----------------
+----------------------------------------
+
+
+--BEGIN TEST GROUP: Check test environment--
+
+Test Environment: Release build
+Actual: TRUE | Expected: TRUE
+
+Test Environment: ISO C standard is C17 or greater
+Actual: 202311 | Expected: 201700
+
+Test Environment: Compiler at/above minimum GCC version
+Actual: 15 | Expected: 8
+
+Test Environment: Compiler at/below maximum GCC version
+Actual: 15 | Expected: 15
+
+Test Environment: Coverage tool at/above minimum GCOVR version
+Actual: 8 | Expected: 7
+
+Test Environment: Coverage tool at/below maximum GCOVR version
+Actual: 8 | Expected: 8
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+--END TEST GROUP: Check test environment--
+
+
+--BEGIN TEST GROUP: POF: launch_detection--
+
+-> BEGIN TEST CASE 0: 
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+-> END TEST CASE
+
+-> BEGIN TEST CASE 1: 
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+-> END TEST CASE
+
+-> BEGIN TEST CASE 2: 
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 1 | Expected: 1
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the new state is powered ascent.
+Actual: 1 | Expected: 1
+
+-> END TEST CASE
+
+-> BEGIN TEST CASE 3: 
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+-> END TEST CASE
+
+-> BEGIN TEST CASE 4: 
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+-> END TEST CASE
+
+-> BEGIN TEST CASE 5: 
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the transition callback was called the right number of times.
+Actual: 1 | Expected: 1
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the new state is powered ascent.
+Actual: 1 | Expected: 1
+
+-> END TEST CASE
+
+--TEST GROUP RESULTS:--
+Group Passes: 134
+Group Fails:  0
+Requirement Tag: RQ.MOD.00060, RQ.MOD.00061
+--END TEST GROUP: POF: launch_detection--
+
+
+--BEGIN TEST GROUP: POF: apogee_detect--
+
+Simple Apogee (window=3)
+Actual: 1 | Expected: 1
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the new state is descent.
+Actual: 3 | Expected: 3
+
+No Apogee (window=3)
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Interrupted Decrease (window=2)
+Actual: 1 | Expected: 1
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the new state is descent.
+Actual: 3 | Expected: 3
+
+No Decrease (window=2)
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Single Drop (window=1)
+Actual: 1 | Expected: 1
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the new state is descent.
+Actual: 3 | Expected: 3
+
+First Nonzero Sample (window=2)
+Actual: 1 | Expected: 1
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the new state is descent.
+Actual: 3 | Expected: 3
+
+Oscillating (window=2)
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Infinite (window=2)
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+--TEST GROUP RESULTS:--
+Group Passes: 20
+Group Fails:  0
+Requirement Tag: RQ.MOD.00060, RQ.MOD.00063
+--END TEST GROUP: POF: apogee_detect--
+
+
+--BEGIN TEST GROUP: POF: coast_detect--
+
+Detects coast after five low readings
+Actual: 1 | Expected: 1
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the new state is unpowered ascent.
+Actual: 2 | Expected: 2
+
+Does not detect coast before five low readings
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Threshold reading resets the low reading count
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Threshold readings do not count as low acceleration
+Actual: 0 | Expected: 0
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Detects coast after a reset and five low readings
+Actual: 1 | Expected: 1
+
+Test that the operation returned successfully
+Actual: 0 | Expected: 0
+
+Test that the new state is unpowered ascent.
+Actual: 2 | Expected: 2
+
+--TEST GROUP RESULTS:--
+Group Passes: 12
+Group Fails:  0
+Requirement Tag: RQ.MOD.00060, RQ.MOD.00062
+--END TEST GROUP: POF: coast_detect--
+
+
+--BEGIN TEST GROUP: POF: initialization--
+
+Verify that initialization succeeded
+Actual: 0 | Expected: 0
+
+Verify that initialization fails if launch detect isnt configured
+Actual: 6 | Expected: 6
+
+Verify that initialization fails if launch detect accel is misconfigured
+Actual: 6 | Expected: 6
+
+Verify that initialization fails if launch detect baro is misconfigured
+Actual: 6 | Expected: 6
+
+Verify that initialization fails if coast detect is misconfigured
+Actual: 6 | Expected: 6
+
+Verify that initialization fails if apogee detect is misconfigured
+Actual: 6 | Expected: 6
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+Requirement Tag: RQ.MOD.00060
+--END TEST GROUP: POF: initialization--
+
+----------------------------------------
+-------------Test Complete--------------
+----------------------------------------
+Passes: 178
+Fails:  0
+Result: PASS
+----------------------------------------
