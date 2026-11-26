@@ -1,0 +1,310 @@
+----------------------------------------
+-----------Sun Devil Rocketry-----------
+-----------Unit Test Results------------
+----------------------------------------
+
+----------------------------------------
+------------Test Environment------------
+----------------------------------------
+
+--General Build Information--
+Test Name:        nav_int
+Test Type:        SW Integration
+Build Date:       Nov 26 2026
+Build Time:       21:08:43
+Run Date:         Nov 26 2026
+Run Time:         21:08:43
+ISO C?:           1
+C Standard:       202311
+
+--GNU C Compiler (GCC) Info--
+GCC Version:      15.2.0
+
+--GCOVR Info--
+GCOVR Version:    8.8
+
+----------------------------------------
+----------------Results-----------------
+----------------------------------------
+
+
+--BEGIN TEST GROUP: Check test environment--
+
+Test Environment: Release build
+Actual: TRUE | Expected: TRUE
+
+Test Environment: ISO C standard is C17 or greater
+Actual: 202311 | Expected: 201700
+
+Test Environment: Compiler at/above minimum GCC version
+Actual: 15 | Expected: 8
+
+Test Environment: Compiler at/below maximum GCC version
+Actual: 15 | Expected: 15
+
+Test Environment: Coverage tool at/above minimum GCOVR version
+Actual: 8 | Expected: 7
+
+Test Environment: Coverage tool at/below maximum GCOVR version
+Actual: 8 | Expected: 8
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+--END TEST GROUP: Check test environment--
+
+
+--BEGIN TEST GROUP: Nav: Test initialization--
+
+Verify that nav initialized normally.
+Actual: 0 | Expected: 0
+
+Verify that the configuration was copied to the internal state
+Actual (address): 0xdb626c40 | Expected (address): 0x58a38ad0
+
+Verify that the calibration was copied to the internal state
+Actual (address): 0xdb626c9c | Expected (address): 0x58a38b00
+
+Verify that the velocity vector was reset
+Actual (address): 0xdb626cd0 | Expected (address): 0x58a38ac4
+
+Verify that nav returned a busy status.
+Actual: 2 | Expected: 2
+
+Verify that NAV did not edit its state
+Actual (address): 0xdb626c40 | Expected (address): 0x58a38b40
+
+Verify that nav returned an invalid status.
+Actual: 6 | Expected: 6
+
+Verify that NAV did not edit its state
+Actual (address): 0xdb626c40 | Expected (address): 0x58a38b40
+
+--TEST GROUP RESULTS:--
+Group Passes: 8
+Group Fails:  0
+Requirement Tag: RQ.MOD.00054, RQ.MOD.00055, RQ.MOD.00057
+--END TEST GROUP: Nav: Test initialization--
+
+
+--BEGIN TEST GROUP: Nav: Test update error handling--
+
+Verify that nav returned a busy status.
+Actual: 2 | Expected: 2
+
+Verify that NAV did not edit its state
+Actual (address): 0xdb626c40 | Expected (address): 0x58a38b40
+
+Verify that NAV did not edit its outputs
+Actual (address): 0x58a38aa0 | Expected (address): 0x58a38ad0
+
+Verify that nav returned a fail status.
+Actual: 1 | Expected: 1
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00053, RQ.MOD.00055
+--END TEST GROUP: Nav: Test update error handling--
+
+
+--BEGIN TEST GROUP: Nav: Test update--
+
+-> BEGIN TEST CASE 0: Test sensor fusion on ground pointing up vertically
+
+Meta: Verify that mahony setup worked.
+Actual: 0 | Expected: 0
+
+Verify the function returned a valid status.
+Actual: 0 | Expected: 0
+
+Verify that the velocity magnitude matches the expected
+Actual: 0.000001 | Expected: 0.000000
+
+Verify that the velocity along the X axis matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the velocity along the Y axis matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the velocity along the Z axis matches the expected
+Actual: 0.000001 | Expected: 0.000000
+
+Verify that the AGL altitude matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the ASL altitude matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the Quat W component matches the expected
+Actual: 0.707107 | Expected: 0.707107
+
+Verify that the Quat X component matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the Quat Y component matches the expected
+Actual: -0.707107 | Expected: -0.707107
+
+Verify that the Quat Z component matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+-> END TEST CASE
+
+-> BEGIN TEST CASE 1: Test sensor fusion on ground with GPS disabled
+
+Meta: Verify that mahony setup worked.
+Actual: 0 | Expected: 0
+
+Verify the function returned a valid status.
+Actual: 0 | Expected: 0
+
+Verify that the velocity magnitude matches the expected
+Actual: 0.000001 | Expected: 0.000000
+
+Verify that the velocity along the X axis matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the velocity along the Y axis matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the velocity along the Z axis matches the expected
+Actual: 0.000001 | Expected: 0.000000
+
+Verify that the AGL altitude matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the ASL altitude matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the Quat W component matches the expected
+Actual: 0.707107 | Expected: 0.707107
+
+Verify that the Quat X component matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+Verify that the Quat Y component matches the expected
+Actual: -0.707107 | Expected: -0.707107
+
+Verify that the Quat Z component matches the expected
+Actual: 0.000000 | Expected: 0.000000
+
+-> END TEST CASE
+
+--TEST GROUP RESULTS:--
+Group Passes: 24
+Group Fails:  0
+Requirement Tag: RQ.MOD.00053, RQ.MOD.00056
+--END TEST GROUP: Nav: Test update--
+
+
+--BEGIN TEST GROUP: Nav: Test resetting velo--
+
+Verify that nav reset correctly.
+Actual: 0 | Expected: 0
+
+Verify that the velocity vector was reset
+Actual (address): 0xdb626cd0 | Expected (address): 0x58a38b44
+
+Verify that nav returned a busy status.
+Actual: 2 | Expected: 2
+
+Verify that NAV did not edit its state
+Actual (address): 0xdb626c40 | Expected (address): 0x58a38b50
+
+Verify that nav returned an invalid status.
+Actual: 1 | Expected: 1
+
+--TEST GROUP RESULTS:--
+Group Passes: 5
+Group Fails:  0
+Requirement Tag: RQ.MOD.00055
+--END TEST GROUP: Nav: Test resetting velo--
+
+
+--BEGIN TEST GROUP: Nav: Test getting ref alt--
+
+Verify that the status was returned OK.
+Actual: 0 | Expected: 0
+
+Verify that the reference alt was returned correctly
+Actual: 0 | Expected: 0
+
+Verify that the function returned a busy status.
+Actual: 2 | Expected: 2
+
+Verify that the function did not edit state
+Actual (address): 0xdb626c40 | Expected (address): 0x58a38b40
+
+Verify that the reference alt was not updated
+Actual: 123456 | Expected: 123456
+
+Verify that the function returned a fail status.
+Actual: 1 | Expected: 1
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+Requirement Tag: RQ.MOD.00055
+--END TEST GROUP: Nav: Test getting ref alt--
+
+
+--BEGIN TEST GROUP: Nav: Test default configs--
+
+Verify that nav returned a valid status.
+Actual: 0 | Expected: 0
+
+Verify that nav initializes properly with the default configs.
+Actual: 0 | Expected: 0
+
+--TEST GROUP RESULTS:--
+Group Passes: 2
+Group Fails:  0
+Requirement Tag: RQ.MOD.00064
+--END TEST GROUP: Nav: Test default configs--
+
+
+--BEGIN TEST GROUP: Nav: Test getting/setting POF--
+
+Verify that the status was returned OK.
+Actual: 0 | Expected: 0
+
+Verify that the POF was returned correctly
+Actual: 1 | Expected: 1
+
+Verify that the status was returned OK.
+Actual: 0 | Expected: 0
+
+Verify that the POF was set correctly
+Actual: 0 | Expected: 0
+
+Verify that set returned a busy status.
+Actual: 2 | Expected: 2
+
+Verify that set did not edit state
+Actual (address): 0xdb626c40 | Expected (address): 0x58a38b40
+
+Verify that get returned a busy status.
+Actual: 2 | Expected: 2
+
+Verify that get did not edit state
+Actual (address): 0xdb626c40 | Expected (address): 0x58a38b40
+
+Verify that set returned a fail status.
+Actual: 1 | Expected: 1
+
+Verify that get returned a fail status.
+Actual: 1 | Expected: 1
+
+--TEST GROUP RESULTS:--
+Group Passes: 10
+Group Fails:  0
+Requirement Tag: RQ.MOD.00055, RQ.MOD.00058, RQ.MOD.00059
+--END TEST GROUP: Nav: Test getting/setting POF--
+
+----------------------------------------
+-------------Test Complete--------------
+----------------------------------------
+Passes: 65
+Fails:  0
+Result: PASS
+----------------------------------------

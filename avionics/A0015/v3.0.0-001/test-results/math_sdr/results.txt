@@ -1,0 +1,371 @@
+----------------------------------------
+-----------Sun Devil Rocketry-----------
+-----------Unit Test Results------------
+----------------------------------------
+
+----------------------------------------
+------------Test Environment------------
+----------------------------------------
+
+--General Build Information--
+Test Name:        math_sdr
+Test Type:        Unit Test
+Build Date:       Nov 26 2026
+Build Time:       21:08:46
+Run Date:         Nov 26 2026
+Run Time:         21:08:46
+ISO C?:           1
+C Standard:       202311
+
+--GNU C Compiler (GCC) Info--
+GCC Version:      15.2.0
+
+--GCOVR Info--
+GCOVR Version:    8.8
+
+----------------------------------------
+----------------Results-----------------
+----------------------------------------
+
+
+--BEGIN TEST GROUP: Check test environment--
+
+Test Environment: Release build
+Actual: TRUE | Expected: TRUE
+
+Test Environment: ISO C standard is C17 or greater
+Actual: 202311 | Expected: 201700
+
+Test Environment: Compiler at/above minimum GCC version
+Actual: 15 | Expected: 8
+
+Test Environment: Compiler at/below maximum GCC version
+Actual: 15 | Expected: 15
+
+Test Environment: Coverage tool at/above minimum GCOVR version
+Actual: 8 | Expected: 7
+
+Test Environment: Coverage tool at/below maximum GCOVR version
+Actual: 8 | Expected: 8
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+--END TEST GROUP: Check test environment--
+
+
+--BEGIN TEST GROUP: Math SDR: CRC-32C--
+
+CRC-32C of an empty buffer is zero.
+Actual: 0 | Expected: 0
+
+CRC-32C matches the standard check value.
+Actual: -486108541 | Expected: -486108541
+
+--TEST GROUP RESULTS:--
+Group Passes: 2
+Group Fails:  0
+Requirement Tag: RQ.MOD.00016
+--END TEST GROUP: Math SDR: CRC-32C--
+
+
+--BEGIN TEST GROUP: Math SDR: Clamp Float--
+
+Values below the range clamp to its minimum.
+Actual: -1.000000 | Expected: -1.000000
+
+Values within the range are unchanged.
+Actual: 0.500000 | Expected: 0.500000
+
+Values above the range clamp to its maximum.
+Actual: 1.000000 | Expected: 1.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 3
+Group Fails:  0
+Requirement Tag: RQ.MOD.00040
+--END TEST GROUP: Math SDR: Clamp Float--
+
+
+--BEGIN TEST GROUP: Math SDR: Quaternion Multiplication--
+
+Quaternion multiplication preserves the w component.
+Actual: 2.000000 | Expected: 2.000000
+
+Quaternion multiplication preserves the x component.
+Actual: 3.000000 | Expected: 3.000000
+
+Quaternion multiplication preserves the y component.
+Actual: 4.000000 | Expected: 4.000000
+
+Quaternion multiplication preserves the z component.
+Actual: 5.000000 | Expected: 5.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00017
+--END TEST GROUP: Math SDR: Quaternion Multiplication--
+
+
+--BEGIN TEST GROUP: Math SDR: Quaternion Dot Product--
+
+Quaternion dot product is calculated correctly.
+Actual: 70.000000 | Expected: 70.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 1
+Group Fails:  0
+Requirement Tag: RQ.MOD.00018
+--END TEST GROUP: Math SDR: Quaternion Dot Product--
+
+
+--BEGIN TEST GROUP: Math SDR: Quaternion Addition--
+
+Quaternion addition calculates w.
+Actual: 6.000000 | Expected: 6.000000
+
+Quaternion addition calculates x.
+Actual: 8.000000 | Expected: 8.000000
+
+Quaternion addition calculates y.
+Actual: 10.000000 | Expected: 10.000000
+
+Quaternion addition calculates z.
+Actual: 12.000000 | Expected: 12.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00019
+--END TEST GROUP: Math SDR: Quaternion Addition--
+
+
+--BEGIN TEST GROUP: Math SDR: Quaternion Scaling--
+
+Quaternion scaling calculates w.
+Actual: 2.500000 | Expected: 2.500000
+
+Quaternion scaling calculates x.
+Actual: -5.000000 | Expected: -5.000000
+
+Quaternion scaling calculates y.
+Actual: 7.500000 | Expected: 7.500000
+
+Quaternion scaling calculates z.
+Actual: -10.000000 | Expected: -10.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00020
+--END TEST GROUP: Math SDR: Quaternion Scaling--
+
+
+--BEGIN TEST GROUP: Math SDR: Quaternion Normalization--
+
+Quaternion normalization calculates w.
+Actual: 0.000000 | Expected: 0.000000
+
+Quaternion normalization calculates x.
+Actual: 0.600000 | Expected: 0.600000
+
+Quaternion normalization calculates y.
+Actual: 0.800000 | Expected: 0.800000
+
+Quaternion normalization calculates z.
+Actual: 0.000000 | Expected: 0.000000
+
+Zero quaternion normalization returns identity w.
+Actual: 1.000000 | Expected: 1.000000
+
+Zero quaternion normalization returns identity x.
+Actual: 0.000000 | Expected: 0.000000
+
+Zero quaternion normalization returns identity y.
+Actual: 0.000000 | Expected: 0.000000
+
+Zero quaternion normalization returns identity z.
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 8
+Group Fails:  0
+Requirement Tag: RQ.MOD.00021
+--END TEST GROUP: Math SDR: Quaternion Normalization--
+
+
+--BEGIN TEST GROUP: Math SDR: Quaternion Conjugation--
+
+Quaternion conjugation preserves w.
+Actual: 1.000000 | Expected: 1.000000
+
+Quaternion conjugation negates x.
+Actual: -2.000000 | Expected: -2.000000
+
+Quaternion conjugation negates y.
+Actual: 3.000000 | Expected: 3.000000
+
+Quaternion conjugation negates z.
+Actual: -4.000000 | Expected: -4.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00022
+--END TEST GROUP: Math SDR: Quaternion Conjugation--
+
+
+--BEGIN TEST GROUP: Math SDR: Quaternion from Euler Angles--
+
+A zero Euler rotation produces identity w.
+Actual: 1.000000 | Expected: 1.000000
+
+A zero Euler rotation produces identity x.
+Actual: 0.000000 | Expected: 0.000000
+
+A 90 degree yaw calculates w.
+Actual: 0.707107 | Expected: 0.707107
+
+A 90 degree yaw calculates x.
+Actual: 0.000000 | Expected: 0.000000
+
+A 90 degree yaw calculates y.
+Actual: 0.000000 | Expected: 0.000000
+
+A 90 degree yaw calculates z.
+Actual: 0.707107 | Expected: 0.707107
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+Requirement Tag: RQ.MOD.00047
+--END TEST GROUP: Math SDR: Quaternion from Euler Angles--
+
+
+--BEGIN TEST GROUP: Math SDR: Quaternion Finiteness--
+
+A finite quaternion is reported as finite.
+Actual: TRUE | Expected: TRUE
+
+A quaternion containing NaN is not finite.
+Actual: FALSE | Expected: FALSE
+
+A quaternion containing infinity is not finite.
+Actual: FALSE | Expected: FALSE
+
+--TEST GROUP RESULTS:--
+Group Passes: 3
+Group Fails:  0
+Requirement Tag: RQ.MOD.00048
+--END TEST GROUP: Math SDR: Quaternion Finiteness--
+
+
+--BEGIN TEST GROUP: Math SDR: Body to World Rotation--
+
+Rotation preserves a pure vector scalar component.
+Actual: 0.000000 | Expected: 0.000000
+
+A 90 degree yaw rotates body x out of world x.
+Actual: 0.000000 | Expected: 0.000000
+
+A 90 degree yaw rotates body x into world y.
+Actual: 1.000000 | Expected: 1.000000
+
+A yaw rotation preserves the z vector component.
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00049
+--END TEST GROUP: Math SDR: Body to World Rotation--
+
+
+--BEGIN TEST GROUP: Math SDR: World to Body Rotation--
+
+Inverse rotation preserves a pure vector scalar component.
+Actual: 0.000000 | Expected: 0.000000
+
+A 90 degree yaw rotates world y into body x.
+Actual: 1.000000 | Expected: 1.000000
+
+A 90 degree yaw rotates world y out of body y.
+Actual: 0.000000 | Expected: 0.000000
+
+Inverse yaw rotation preserves the z vector component.
+Actual: 0.000000 | Expected: 0.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00050
+--END TEST GROUP: Math SDR: World to Body Rotation--
+
+
+--BEGIN TEST GROUP: Math SDR: Vector Operations--
+
+Vector addition calculates x.
+Actual: 5.000000 | Expected: 5.000000
+
+Vector addition calculates y.
+Actual: 3.000000 | Expected: 3.000000
+
+Vector addition calculates z.
+Actual: -3.000000 | Expected: -3.000000
+
+Vector cross product calculates x.
+Actual: 0.000000 | Expected: 0.000000
+
+Vector cross product calculates y.
+Actual: 0.000000 | Expected: 0.000000
+
+Vector cross product calculates z.
+Actual: 1.000000 | Expected: 1.000000
+
+A finite vector is reported as finite.
+Actual: TRUE | Expected: TRUE
+
+A vector containing NaN is not finite.
+Actual: FALSE | Expected: FALSE
+
+Vector magnitude is calculated correctly.
+Actual: 13.000000 | Expected: 13.000000
+
+A nonzero vector is normalized.
+Actual: TRUE | Expected: TRUE
+
+Vector normalization calculates x.
+Actual: 0.600000 | Expected: 0.600000
+
+Vector normalization calculates y.
+Actual: 0.800000 | Expected: 0.800000
+
+Vector normalization calculates z.
+Actual: 0.000000 | Expected: 0.000000
+
+A zero vector cannot be normalized.
+Actual: FALSE | Expected: FALSE
+
+Vector scaling calculates x.
+Actual: -2.000000 | Expected: -2.000000
+
+Vector scaling calculates y.
+Actual: 4.000000 | Expected: 4.000000
+
+Vector scaling calculates z.
+Actual: -6.000000 | Expected: -6.000000
+
+--TEST GROUP RESULTS:--
+Group Passes: 17
+Group Fails:  0
+Requirement Tag: RQ.MOD.00041 RQ.MOD.00042 RQ.MOD.00043 RQ.MOD.00044 RQ.MOD.00045 RQ.MOD.00046
+--END TEST GROUP: Math SDR: Vector Operations--
+
+----------------------------------------
+-------------Test Complete--------------
+----------------------------------------
+Passes: 70
+Fails:  0
+Result: PASS
+----------------------------------------
