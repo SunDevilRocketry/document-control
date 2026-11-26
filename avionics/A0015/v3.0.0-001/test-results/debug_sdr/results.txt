@@ -1,0 +1,163 @@
+----------------------------------------
+-----------Sun Devil Rocketry-----------
+-----------Unit Test Results------------
+----------------------------------------
+
+----------------------------------------
+------------Test Environment------------
+----------------------------------------
+
+--General Build Information--
+Test Name:        debug_sdr
+Test Type:        Unit Test
+Build Date:       Nov 26 2026
+Build Time:       21:16:01
+Run Date:         Nov 26 2026
+Run Time:         21:16:01
+ISO C?:           1
+C Standard:       202311
+
+--GNU C Compiler (GCC) Info--
+GCC Version:      15.2.0
+
+--GCOVR Info--
+GCOVR Version:    8.8
+
+----------------------------------------
+----------------Results-----------------
+----------------------------------------
+
+
+--BEGIN TEST GROUP: Check test environment--
+
+Test Environment: Release build
+Actual: TRUE | Expected: TRUE
+
+Test Environment: ISO C standard is C17 or greater
+Actual: 202311 | Expected: 201700
+
+Test Environment: Compiler at/above minimum GCC version
+Actual: 15 | Expected: 8
+
+Test Environment: Compiler at/below maximum GCC version
+Actual: 15 | Expected: 15
+
+Test Environment: Coverage tool at/above minimum GCOVR version
+Actual: 8 | Expected: 7
+
+Test Environment: Coverage tool at/below maximum GCOVR version
+Actual: 8 | Expected: 8
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+--END TEST GROUP: Check test environment--
+
+
+--BEGIN TEST GROUP: Debug SDR: Validation and Log Levels--
+
+Debug init rejects a null write callback.
+Actual: 1 | Expected: 1
+
+Debug init accepts a custom overflow callback.
+Actual: 0 | Expected: 0
+
+Debug log rejects a null message.
+Actual: 1 | Expected: 1
+
+Debug log rejects an oversized message.
+Actual: 1 | Expected: 1
+
+Debug log rejects an unknown level.
+Actual: 1 | Expected: 1
+
+Info logging succeeds.
+Actual: 0 | Expected: 0
+
+Warning logging succeeds.
+Actual: 0 | Expected: 0
+
+Error logging succeeds.
+Actual: 0 | Expected: 0
+
+--TEST GROUP RESULTS:--
+Group Passes: 8
+Group Fails:  0
+Requirement Tag: RQ.MOD.00007
+--END TEST GROUP: Debug SDR: Validation and Log Levels--
+
+
+--BEGIN TEST GROUP: Debug SDR: Wrap and Callback Handling--
+
+Initial logging starts a write.
+Actual: 0 | Expected: 0
+
+A write callback was invoked.
+Actual: 1 | Expected: 1
+
+Logging while transmitting succeeds.
+Actual: 0 | Expected: 0
+
+-> BEGIN TEST CASE 0: Asynchronous write callback
+
+Write callback remains active while transmitting.
+Actual: 1 | Expected: 1
+
+Requirements: RQ.MOD.00009
+-> END TEST CASE
+
+-> BEGIN TEST CASE 1: Circular debug buffer
+
+Callback handler transmits pending data.
+Actual: 2 | Expected: 2
+
+Callback handler leaves an empty buffer idle.
+Actual: 2 | Expected: 2
+
+Requirements: RQ.MOD.00008
+-> END TEST CASE
+
+--TEST GROUP RESULTS:--
+Group Passes: 6
+Group Fails:  0
+Requirement Tag: RQ.MOD.00012
+--END TEST GROUP: Debug SDR: Wrap and Callback Handling--
+
+
+--BEGIN TEST GROUP: Debug SDR: Overflow Handling--
+
+Custom overflow returns DEBUG_OVERFLOW.
+Actual: 2 | Expected: 2
+
+-> BEGIN TEST CASE 0: Overflow callback
+
+Custom overflow callback is invoked.
+Actual: 1 | Expected: 1
+
+Requirements: RQ.MOD.00010
+-> END TEST CASE
+
+-> BEGIN TEST CASE 1: Default overflow implementation
+
+Default overflow returns DEBUG_OVERFLOW.
+Actual: 2 | Expected: 2
+
+Default overflow logs its replacement message.
+Actual: 1 | Expected: 1
+
+Requirements: RQ.MOD.00011
+-> END TEST CASE
+
+--TEST GROUP RESULTS:--
+Group Passes: 4
+Group Fails:  0
+Requirement Tag: RQ.MOD.00010
+--END TEST GROUP: Debug SDR: Overflow Handling--
+
+----------------------------------------
+-------------Test Complete--------------
+----------------------------------------
+Passes: 24
+Fails:  0
+Result: PASS
+----------------------------------------

@@ -1,0 +1,54 @@
+# Requirements Traceability Report
+
+| Requirement tag | Trace Up | Requirement text | Results file | Test status |
+| --- | --- | --- | --- | --- |
+| `RQ.MOD.00002` | N/A | The library shall be organized into self-contained modules with header files organized next to source files. | `mod/_test/mod/analysis_results.md` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00003` | N/A | The library shall be designed to be compiled with GNU GCC for the desired target architecture. | `mod/_test/mod/analysis_results.md` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00004` | N/A | The library shall provide a ping response code based on the provided compiler macro from the project. | `mod/_test/mod/commands/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00007` | N/A | The library shall provide a platform-independent method to log debug data. | `mod/_test/mod/debug_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00008` | N/A | The debug logger shall use a circular buffer without dynamic memory allocation. | `mod/_test/mod/debug_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00009` | N/A | The debug logger shall accept a callback to be used to write debug data asynchronously. | `mod/_test/mod/debug_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00010` | N/A | The debug logger shall accept a callback to be used if the buffer overflows. | `mod/_test/mod/debug_sdr/results.txt`<br>`mod/_test/mod/debug_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00011` | N/A | The debug logger shall provide a default implementation of the buffer overflow callback. | `mod/_test/mod/debug_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00012` | N/A | The debug logger shall provide a function to be called after an asynchronous write completes. | `mod/_test/mod/debug_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00013` | N/A | The library shall provide an error handler. | `mod/_test/mod/error_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00014` | N/A | If the USE_ERROR_CALLBACK macro is defined, the error handler shall search a lookup table for a callback provided by the project given an error code. | `mod/_test/mod/error_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00015` | N/A | The error handler shall provide an overridable default error callback if the lookup fails or USE_ERROR_CALLBACK is not defined. | `mod/_test/mod/error_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00016` | N/A | The library shall provide a method to compute a Castagnoli 32-bit cyclic redundancy check. | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00040` | N/A | The library shall provide a method to clamp a float within a specified range. | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00017` | N/A | Hamilton Product (multiplication) | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00018` | N/A | Dot product | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00019` | N/A | Addition | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00020` | N/A | Scalar Multiplication | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00021` | N/A | Unit normalization | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00022` | N/A | Conjugation | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00047` | N/A | Creation from euler angles | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00048` | N/A | Determine whether quat is finite | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00049` | N/A | Body-to-world frame transition | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00050` | N/A | World-to-body frame transition | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00041` | N/A | Addition | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00042` | N/A | Cross Product | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00043` | N/A | Determine whether vector is finite | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00044` | N/A | Determine magnitude | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00045` | N/A | Normalization | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00046` | N/A | Scalar Multiplication | `mod/_test/mod/math_sdr/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00051` | N/A | The library shall control Sun Devil Rocketry's one-way telemetry interface by defining the authoritative version in a header for projects to integrate. | `mod/_test/mod/nav_isa/results.txt`<br>`mod/_test/mod/telemetry/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00053` | N/A | The library shall provide a method to fuse sensor data. | `mod/_test/mod/nav_int/results.txt`<br>`mod/_test/mod/nav_int/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00054` | N/A | The library shall provide a method to initialize the sensor fusion system. | `mod/_test/mod/nav_int/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00055` | N/A | The library shall call a contract function to prevent concurrent access to its state before accessing state data. | `mod/_test/mod/nav_int/results.txt`<br>`mod/_test/mod/nav_int/results.txt`<br>`mod/_test/mod/nav_int/results.txt`<br>`mod/_test/mod/nav_int/results.txt`<br>`mod/_test/mod/nav_int/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00056` | N/A | The library shall invalidate output data that cannot be determined from the configured sources. | `mod/_test/mod/nav_int/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00057` | N/A | The library shall provide a method to reset velocity integration. | `mod/_test/mod/nav_int/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00064` | N/A | The library shall provide a valid default configuration. | `mod/_test/mod/nav_int/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00036` | N/A | The library shall provide a Mahony filter to fuse accelerometer and gyroscope data to return an attitude estimate. | `mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00037` | N/A | The library shall report vehicle orientation with a unit quaternion. | `mod/_test/mod/nav_mahony/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00038` | N/A | The project disables fusion. | `mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00039` | N/A | The provided parameters for accelerometer fusion are invalid. | `mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt`<br>`mod/_test/mod/nav_mahony/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00031` | N/A | The library shall provide a method to convert a barometric pressure and temperature reading to an ISA altitude. | `mod/_test/mod/nav_isa/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00051` | N/A | The library shall provide a method to retrieve a ground reference elevation from current and calibrated pressure and temperature. | `mod/_test/mod/nav_isa/results.txt`<br>`mod/_test/mod/telemetry/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00052` | N/A | The library shall provide a method to retrieve the ISA temperature given a barometric pressure reading. | `mod/_test/mod/nav_isa/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00058` | N/A | The library shall provide a method to set the phase of flight. | `mod/_test/mod/nav_int/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00059` | N/A | The library shall provide a method to get the phase of flight. | `mod/_test/mod/nav_int/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00060` | N/A | The library shall update phase of flight during sensor fusion. | `mod/_test/mod/nav_pof/results.txt`<br>`mod/_test/mod/nav_pof/results.txt`<br>`mod/_test/mod/nav_pof/results.txt`<br>`mod/_test/mod/nav_pof/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00061` | N/A | On-Ground -> Powered Ascent | `mod/_test/mod/nav_pof/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00062` | N/A | Powered Ascent -> Unpowered Ascent | `mod/_test/mod/nav_pof/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
+| `RQ.MOD.00063` | N/A | Ascent -> Descent | `mod/_test/mod/nav_pof/results.txt` | <span style="color: #15803d"><strong>PASS</strong></span> |
